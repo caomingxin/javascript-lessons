@@ -77,8 +77,8 @@ console.log(delete 1);          // true，无意义
 
 var a = [1,2,3];                // 定义一个数组
 console.log(delete a[2]);       // true，删除最后一个数组元素
-console.log(2 in a);            // false，元素2在数组中不再存在
-console.log(a.length);          // 3，数组长度并不会因 delete 而改变
+console.log(2 in a);            // false，索引为2的元素不存在
+console.log(a.length);          // 3，数组长度并不会因 delete 而改变
 console.log(a[2]);              // undefined，元素2所在的位置被空了出来
 console.log(delete a);          // false，通过 var 语句声明的变量不能删除
 
@@ -315,7 +315,7 @@ var point = { x:1, y:1 };       // 定义一个对象
 "toString" in point             // true，对象继承了toString()方法
 
 var data = [7,8,9];             // 拥有三个元素的数组
-"0" in data                     // true，数组包含元素"0"
+"0" in data                     // true，数组包含索引为0的元素
 1 in data                       // true，数字转换为字符串
 3 in data                       // false，没有索引为3的元素
 ```
