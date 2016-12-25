@@ -187,7 +187,7 @@ for(var i = 0, len = keys.length; i < len; i++) {
 
 ``` javascript
 for(var i = 0; i < a.length; i++) {
-    if (!a[i]) continue;    // 跳过 null、undefined 和不存在的元素
+    if (!a[i]&&a[i]!==0&&a[i]!==false) continue;    // 跳过 null、undefined 和不存在的元素
     if (!(i in a)) continue ;   // 跳过不存在的元素
     if (a[i] === undefined) continue;   // 跳过 undefined 和不存在的元素
     // 循环体
